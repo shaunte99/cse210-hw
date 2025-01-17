@@ -16,7 +16,7 @@ class Program
 
     static void DisplayWelcome()
     {
-        Console.WriteLine("Welcome to the Program!");
+        Console.WriteLine("Welcome");
     }
 
     static string PromptUserName()
