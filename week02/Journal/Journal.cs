@@ -37,7 +37,7 @@ public class Journal
         Console.WriteLine("\nMusic Journal Entries ");
         if (_entries.Count == 0)
         {
-            Console.WriteLine("No entries yet. Start logging your music journey today! 🎧");
+            Console.WriteLine("No entries yet. Start logging your music journey today! ");
         }
         else
         {
