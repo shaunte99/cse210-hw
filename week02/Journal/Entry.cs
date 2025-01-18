@@ -1,23 +1,24 @@
-using System;
+using system ;
 
-namespace JournalProgram
-{
-    public class Entry
-    {
-        public string Prompt { get; set; }
-        public string Response { get; set; }
-        public string Date { get; set; }
+public class Entry
 
-        public Entry(string prompt, string response)
-        {
-            Prompt = prompt;
-            Response = response;
-            Date = DateTime.Now.ToShortDateString();
-        }
+{  public string song {get;set;}
+   public string Artist {get;set;}
+   public string Genre {get;set;}
+   public string Date  {get;set;}
 
-        public override string ToString()
-        {
-            return $"[{Date}] {Prompt}\n{Response}\n";
-        }
-    }
+   public Entry (string song , string artist,string genre,string date) 
+   { 
+    song = song;
+    Artist = artist;
+    Genre = genre;
+    Date = DateTime.Now.ToString("YYYY-MM-DD HH:MM:SS");
+    
+   } 
+   public override string ToString()
+   {
+     return $"Date: {Date}\nsong: {Song}\nArtist: {Artist}\nGenre: {Genre}\nDate: {Date}";
+   
+   }  
+   
 }
