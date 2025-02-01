@@ -1,10 +1,8 @@
 using System;
 
 class Program
-{
-    static void Main(string[] args)
+{       static void Main(string[] args)
     {
-        
         Video video1 = new Video("Rugby World Cup SA Highlights", "SuperSport", 600);
         video1.AddComment(new Comment("Thabo M.", "What a thrilling game! Proud to be South African."));
         video1.AddComment(new Comment("Ayanda Nkosi", "Kolisi is a legend!"));
@@ -20,10 +18,8 @@ class Program
         video3.AddComment(new Comment("Tshepo M.", "Can't wait to visit the Maboneng Precinct again!"));
         video3.AddComment(new Comment("Nandi C.", "SA is beautiful 😍"));
 
-        
-        Video[] videos = { video1, video2, video3 };
+        Video[] videos = { video1, video2, video3 }; 
 
-        
         foreach (var video in videos)
         {
             video.DisplayVideoInfo();
