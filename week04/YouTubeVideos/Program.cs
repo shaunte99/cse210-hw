@@ -11,13 +11,13 @@ class Program
 
         Video video2 = new Video("Best Braai Tips for Summer", "SA Outdoor Cooking", 450);
         video2.AddComment(new Comment("Palesa M.", "Going to try that marinade recipe this weekend!"));
-        video2.AddComment(new Comment("Sipho K.", "Braai culture is unmatched 🔥"));
+        video2.AddComment(new Comment("Sipho K.", "Braai culture is unmatched "));
         video2.AddComment(new Comment("Mpho D.", "Loved the spice recommendations!"));
 
         Video video3 = new Video("Drone Tour of Johannesburg", "SA Sky Views", 900);
         video3.AddComment(new Comment("Lerato P.", "Wow, Joburg looks stunning from above!"));
         video3.AddComment(new Comment("Tshepo M.", "Can't wait to visit the Maboneng Precinct again!"));
-        video3.AddComment(new Comment("Nandi C.", "SA is beautiful 😍"));
+        video3.AddComment(new Comment("Nandi C.", "SA is beautiful "));
 
         Video[] videos = { video1, video2, video3 }; 
 
