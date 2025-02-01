@@ -20,12 +20,10 @@ public class Video
     {
         Comments.Add(comment);
     }
-
     public int GetNumberOfComments()
     {
         return Comments.Count;
     }
-
     public void DisplayVideoInfo()
     {
         Console.WriteLine($"Title: {Title}");

@@ -4,7 +4,6 @@ public class Product
     private int _productId;
     private double _unitPrice;
     private int _quantity;
-
     public Product(string productName, int productId, double unitPrice, int quantity)
     {
         _productName = productName;
@@ -12,12 +11,10 @@ public class Product
         _unitPrice = unitPrice;
         _quantity = quantity;
     }
-
     public double GetProductTotal()
     {
         return _unitPrice * _quantity;
     }
-
     public string GetProductInfo()
     {
         return $"{_productName} (ID: {_productId})";

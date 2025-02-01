@@ -1,7 +1,8 @@
 using System;
 
 class Program
-{       static void Main(string[] args)
+{       
+         static void Main(string[] args)
     {
         Video video1 = new Video("Rugby World Cup SA Highlights", "SuperSport", 600);
         video1.AddComment(new Comment("Thabo M.", "What a thrilling game! Proud to be South African."));

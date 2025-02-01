@@ -1,23 +1,20 @@
 using System;
 using System.Collections.Generic;
-
 public class Order
 {
     private List<Product> _products;
     private Customer _customer;
-
     public Order(Customer customer)
     {
         _customer = customer;
         _products = new List<Product>();
     }
-
     public void AddProduct(Product product)
     {
         _products.Add(product);
     }
 
-    public double CalculateOrderTotal()
+      public double CalculateOrderTotal()
     {
         double total = 0;
         foreach (Product product in _products)
@@ -25,20 +22,18 @@ public class Order
             total += product.GetProductTotal();
         }
 
-        // Shipping cost based on the customer's location
         if (_customer.IsInUS())
         {
-            total += 5;  // Shipping within the USA
+            total += 5; 
         }
         else
         {
-            total += 35; // International shipping
+            total += 35; 
         }
 
         return total;
     }
-
-    public string GetPackingLabel()
+      public string GetPackingLabel()
     {
         string label = "Packing Label:\n";
         foreach (Product product in _products)
@@ -47,8 +42,7 @@ public class Order
         }
         return label;
     }
-
-    public string GetShippingLabel()
+      public string GetShippingLabel()
     {
         string label = "Shipping Label:\n";
         label += _customer.GetCustomerInfo();
