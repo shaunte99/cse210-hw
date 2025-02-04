@@ -6,7 +6,7 @@ public class Video
     public string Title { get; set; }
     public string Author { get; set; }
     public int Length { get; set; } 
-    private List<Comment> Comments { get; set; }
+    private List<Comment> VideoComments { get; set; }
 
     public Video(string title, string author, int length)
     {
@@ -22,16 +22,16 @@ public class Video
     }
     public int GetNumberOfComments()
     {
-        return Comments.Count;
+        return VideoComments.Count;
     }
     public void DisplayVideoInfo()
     {
         Console.WriteLine($"Title: {Title}");
         Console.WriteLine($"Author: {Author}");
         Console.WriteLine($"Length: {Length} seconds");
-        Console.WriteLine($"Number of Comments: {GetNumberOfComments()}");
-        Console.WriteLine("Comments:");
-        foreach (var comment in Comments)
+        Console.WriteLine($"Comments: {GetNumberOfComments()}");
+        Console.WriteLine("User Comments:");
+        foreach (var comment in VideoComments)
         {
             Console.WriteLine($"- {comment.Name}: {comment.Text}");
         }
