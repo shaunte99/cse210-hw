@@ -1,22 +1,22 @@
 public class Address
 {
-    private string _street;
-    private string _city;
-    private string _province;
-    private string _country;
+    private string _streetAddress;
+    private string _cityName;
+    private string _StateName;
+    private string _countryName;
     public Address(string street, string city, string province, string country)
     {
-        _street = street;
-        _city = city;
-        _province = province;
-        _country = country;
+        _streetAddress = street;
+        _cityName = city;
+        _StateName = State;
+        _countryName = country;
     }
     public bool IsInUS()
     {
-        return _country.ToLower() == "united states";
+        return _countryName.ToLower() == "united states";
     }
     public string GetFullAddress()
     {
-        return $"{_street}\n{_city}, {_province}\n{_country}";
+        return $"{_streetAddress}\n{_cityName}, {_StateName}\n{_countryName}";
     }
 }

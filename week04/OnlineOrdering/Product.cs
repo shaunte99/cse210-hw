@@ -2,18 +2,18 @@ public class Product
 {
     private string _productName;
     private int _productId;
-    private double _unitPrice;
-    private int _quantity;
+    private double _PricePerUnit;
+    private int _quantityInOrder;
     public Product(string productName, int productId, double unitPrice, int quantity)
     {
         _productName = productName;
         _productId = productId;
-        _unitPrice = unitPrice;
-        _quantity = quantity;
+        _PricePerUnit = unitPrice;
+        _quantityInOrder = quantity;
     }
     public double GetProductTotal()
     {
-        return _unitPrice * _quantity;
+        return _PricePerUnit * _quantityInOrder;
     }
     public string GetProductInfo()
     {

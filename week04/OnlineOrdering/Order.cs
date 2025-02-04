@@ -2,41 +2,33 @@ using System;
 using System.Collections.Generic;
 public class Order
 {
-    private List<Product> _products;
-    private Customer _customer;
+    private List<Product> _productList;
+    private Customer _orderCustomer;
     public Order(Customer customer)
     {
-        _customer = customer;
-        _products = new List<Product>();
+        _orderCustomer = customer;
+        _productList = new List<Product>();
     }
     public void AddProduct(Product product)
     {
-        _products.Add(product);
+        _productList.Add(product);
     }
-
       public double CalculateOrderTotal()
     {
-        double total = 0;
-        foreach (Product product in _products)
+        double totalAmount = 0;
+        foreach (Product product in _productList)
         {
-            total += product.GetProductTotal();
+            totalAmount += product.GetProductTotal();
         }
 
-        if (_customer.IsInUS())
-        {
-            total += 5; 
-        }
-        else
-        {
-            total += 35; 
-        }
-
-        return total;
+        totalAmount += _orderCustomer.IsInUs() ? 5 : 35;
+       
+        return totalAmount;
     }
       public string GetPackingLabel()
     {
         string label = "Packing Label:\n";
-        foreach (Product product in _products)
+        foreach (Product product in _productList)
         {
             label += product.GetProductInfo() + "\n";
         }
@@ -45,7 +37,7 @@ public class Order
       public string GetShippingLabel()
     {
         string label = "Shipping Label:\n";
-        label += _customer.GetCustomerInfo();
+        label += _orderCustomer.GetCustomerInfo();
         return label;
     }
 }
