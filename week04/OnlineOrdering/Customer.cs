@@ -16,4 +16,8 @@ public class Customer
     {
         return $"{_Name}\n{_CustomerAddress.GetFullAddress()}";
     }
+    public Address GetCustomerAddress()
+    {
+        return _CustomerAddress;
+    }
 }

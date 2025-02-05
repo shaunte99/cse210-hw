@@ -13,12 +13,12 @@ public class Video
         Title = title;
         Author = author;
         Length = length;
-        Comments = new List<Comment>();
+        VideoComments = new List<Comment>();
     }
 
     public void AddComment(Comment comment)
     {
-        Comments.Add(comment);
+        VideoComments.Add(comment);
     }
     public int GetNumberOfComments()
     {

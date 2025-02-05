@@ -21,7 +21,7 @@ public class Order
             totalAmount += product.GetProductTotal();
         }
 
-        totalAmount += _orderCustomer.IsInUs() ? 5 : 35;
+        totalAmount += _orderCustomer.GetCustomerAddress().IsInUS() ? 5 : 35;
        
         return totalAmount;
     }

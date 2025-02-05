@@ -2,13 +2,13 @@ public class Address
 {
     private string _streetAddress;
     private string _cityName;
-    private string _StateName;
+    private string _ProvinceName;
     private string _countryName;
-    public Address(string street, string city, string province, string country)
+    public Address(string street, string city, string Province, string country)
     {
         _streetAddress = street;
         _cityName = city;
-        _StateName = State;
+        _ProvinceName = Province;
         _countryName = country;
     }
     public bool IsInUS()
@@ -17,6 +17,6 @@ public class Address
     }
     public string GetFullAddress()
     {
-        return $"{_streetAddress}\n{_cityName}, {_StateName}\n{_countryName}";
+        return $"{_streetAddress}\n{_cityName}, {_ProvinceName}\n{_countryName}";
     }
 }
