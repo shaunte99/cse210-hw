@@ -1,6 +1,5 @@
 using System;
 using System.Threading;
-
 namespace MindfulnessAppMzansi
 {
     class BreathingActivity : MindfulnessActivity
@@ -18,7 +17,6 @@ namespace MindfulnessAppMzansi
             }
             EndActivity("Breathing");
         }
-
         private void ShowCountdown(int seconds)
         {
             for (int i = seconds; i > 0; i--)

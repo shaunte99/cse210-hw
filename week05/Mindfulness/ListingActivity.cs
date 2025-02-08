@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-
 namespace MindfulnessAppMzansi
 {
     class ListingActivity : MindfulnessActivity
@@ -13,7 +12,6 @@ namespace MindfulnessAppMzansi
             "What moments of kindness have you experienced recently?",
             "Who are your personal heroes from Mzansi?"
         };
-
         public override void PerformActivity()
         {
             StartActivity("Listing", "This activity will help you reflect on the good things in your life, Mzansi style.");

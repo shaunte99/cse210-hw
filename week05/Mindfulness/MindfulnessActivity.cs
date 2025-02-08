@@ -1,6 +1,5 @@
 using System;
 using System.Threading;
-
 namespace MindfulnessAppMzansi
 {
     abstract class MindfulnessActivity
@@ -15,7 +14,6 @@ namespace MindfulnessAppMzansi
             Console.WriteLine("Prepare to begin... Yebo!\n");
             ShowSpinner(3);
         }
-
         public void EndActivity(string activityName)
         {
             Console.WriteLine($"\nEish! Well done! You've completed the {activityName} for {Duration} seconds.");
