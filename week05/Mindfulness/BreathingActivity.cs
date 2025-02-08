@@ -7,7 +7,7 @@ namespace MindfulnessAppMzansi
     {
         public override void PerformActivity()
         {
-            StartActivity("Breathing", "This activity will help you relax like a sundowner at the beach. Focus on deep breathing. Lekker vibes!");
+            StartActivity("Breathing", "This activity will help you relax Focus on your Breathing. Lekker vibes!");
 
             for (int i = 0; i < Duration / 6; i++)
             {
