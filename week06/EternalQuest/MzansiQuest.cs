@@ -12,13 +12,13 @@ public class MzansiQuest
         while (true)
         {
             Console.WriteLine("\nSelect Your Action:");
-            Console.WriteLine("1. ✨ Add New Goal");
-            Console.WriteLine("2. 🏁 Log Progress");
-            Console.WriteLine("3. 👀 View All Goals");
-            Console.WriteLine("4. 🏅 View XP Points");
-            Console.WriteLine("5. 💾 Save Your Hustle");
-            Console.WriteLine("6. 📂 Load Saved Hustle");
-            Console.WriteLine("7. ✌️ Exit");
+            Console.WriteLine("1.  Add New Goal");
+            Console.WriteLine("2.  Log Progress");
+            Console.WriteLine("3.  View All Goals");
+            Console.WriteLine("4.  View XP Points");
+            Console.WriteLine("5.  Save Your Hustle");
+            Console.WriteLine("6.  Load Saved Hustle");
+            Console.WriteLine("7.  Exit");
 
             string userChoice = Console.ReadLine();
             switch (userChoice)
@@ -33,7 +33,7 @@ public class MzansiQuest
                     ShowGoals();
                     break;
                 case "4":
-                    Console.WriteLine($"🔥 Your XP: {totalPoints} points");
+                    Console.WriteLine($" Your XP: {totalPoints} points");
                     break;
                 case "5":
                     SaveAllGoals();
@@ -53,7 +53,7 @@ public class MzansiQuest
 
     private void AddGoal()
     {
-        Console.WriteLine("Select Goal Type: 1) Once-Off 🏆 2) Forever 🌍 3) Hustle List ✅");
+        Console.WriteLine("Select Goal Type: 1) Once-Off  2) Forever  3) Hustle List ");
         string goalType = Console.ReadLine();
 
         Console.Write("Give your Goal a Name (e.g., 'Ace Final Exams', 'Learn Xhosa'): ");
@@ -95,7 +95,7 @@ public class MzansiQuest
 
     private void ShowGoals()
     {
-        Console.WriteLine("\n🛤️ Your Mzansi Hustle Goals:");
+        Console.WriteLine("\n Your Mzansi Hustle Goals:");
         for (int i = 0; i < ubuntuGoals.Count; i++)
         {
             Console.WriteLine($"{i + 1}. {ubuntuGoals[i].DisplayStatus()}");
@@ -110,7 +110,7 @@ public class MzansiQuest
             foreach (UbuntuGoal g in ubuntuGoals)
                 writer.WriteLine(g.SaveGoal());
         }
-        Console.WriteLine("📁 Your hustle is saved!");
+        Console.WriteLine(" Your hustle is saved!");
     }
 
     private void LoadAllGoals()
@@ -138,6 +138,6 @@ public class MzansiQuest
             else if (type == "HustleList")
                 ubuntuGoals.Add(new HustleListGoal(data[0], int.Parse(data[1]), int.Parse(data[2]), int.Parse(data[4])));
         }
-        Console.WriteLine("📂 Hustle loaded successfully!");
+        Console.WriteLine(" Hustle loaded successfully!");
     }
 }
